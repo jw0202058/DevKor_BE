@@ -11,12 +11,12 @@ export class UserController {
     }
 
     @Post()
-    addUser(@Body() info): Promise<string[]> {
+    async addUser(@Body() info): Promise<string[]> {
         return this.userService.addUser(info.name);
     }
 
     @Delete()
-    deleteUser(@Body() info): Promise<string[]> {
+    async deleteUser(@Body() info): Promise<string[]> {
         return this.userService.deleteUser(info.name);
     }
 
